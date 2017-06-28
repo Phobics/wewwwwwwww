@@ -1,0 +1,13 @@
+<script type="text/javascript" src="http://l2.io/ip.js?var=userip"></script>
+<script>
+var url = 'https://discordapp.com/api/webhooks/329714823808155650/nehLXf_IgtQt28KigGc6sI3b3b0G1hagsNFcjJC2Fwth_xa0g_Nk6ci61Kr2kIoGsaaP/slack';
+function postMessage(msg) {
+    var xml = new XMLHttpRequest();
+    xml.open('POST', url, true);
+    xml.setRequestHeader('Content-type', 'application/json');
+    xml.send(JSON.stringify({
+        text: msg
+    }));
+}
+postMessage(userip + " connected to " + document.location.href);
+</script>
